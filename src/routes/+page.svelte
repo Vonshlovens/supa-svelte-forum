@@ -41,7 +41,6 @@
 		width: 100%;
 		text-align: center;
 	}
-
 	.welcome {
 		display: block;
 		position: relative;
@@ -55,7 +54,7 @@
 		width: 200%;
 		height: 200%;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translateX(-50%) translateY(-50%);
 		display: block;
 	}
 </style>
