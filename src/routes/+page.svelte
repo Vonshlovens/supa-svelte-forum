@@ -1,6 +1,6 @@
 <script>
 	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
+	import immortal from '$lib/images/immortal.svg';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
@@ -13,12 +13,12 @@
 	<h1>
 		<span class="welcome">
 			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
+				<source srcset={immortal} type="image/svg+xml" />
+				<img src={immortal} alt="Immortal" />
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		Welcome to the Immortal Forum
 	</h1>
 
 	<h2>

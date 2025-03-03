@@ -1,0 +1,41 @@
+<svg 
+    version="1.1" 
+    baseProfile="full" 
+    width="300" height="100" 
+    viewBox="0 0 300 100" 
+    xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Define a purple gradient and a glow filter -->
+  <defs>
+    <!-- Purple gradient -->
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6a0dad; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9932cc; stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <!-- Blur the text -->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+      <!-- Merge the blurred text with the original for a glow effect -->
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main text: "IMMORTAL" -->
+  <text 
+    x="50%" 
+    y="50%" 
+    dominant-baseline="middle" 
+    text-anchor="middle" 
+    font-family="'Comic Sans MS', Impact, sans-serif"
+    font-size="48" 
+    font-weight="bold"
+    fill="url(#purpleGradient)"
+    filter="url(#glow)">
+    IMMORTAL
+  </text>
+</svg>

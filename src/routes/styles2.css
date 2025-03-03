@@ -1,0 +1,24 @@
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-attachment: fixed;
+	background-color: #121212; /* Dark base color */
+	background-size: 100vw 100vh;
+	background-image: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(255, 255, 255, 0.1) 0%,
+			rgba(0, 0, 0, 0) 100%
+		),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, #121212 25%, #000000 100%);
+}
+
+/* You'll likely also want to update the text color for better contrast */
+:root {
+	--color-text: rgba(255, 255, 255, 0.87);
+}
+
+/* You might want to update these as well for better visibility on dark background */
+pre {
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 2px 2px 6px rgb(0 0 0 / 25%);
+}
