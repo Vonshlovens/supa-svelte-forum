@@ -1,8 +1,8 @@
 <svg 
     version="1.1" 
     baseProfile="full" 
-    width="300" height="100" 
-    viewBox="0 0 300 100" 
+    width="600" height="200" 
+    viewBox="0 0 600 200" 
     xmlns="http://www.w3.org/2000/svg">
 
   <!-- Define a purple gradient and a glow filter -->
@@ -23,19 +23,27 @@
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+    
+    <!-- Adding outline filter -->
+    <filter id="outline" x="-10%" y="-10%" width="120%" height="120%">
+      <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="dilated"/>
+      <feFlood flood-color="black" flood-opacity="1" result="outlineColor"/>
+      <feComposite in="outlineColor" in2="dilated" operator="in" result="outline"/>
+      <feComposite in="SourceGraphic" in2="outline" operator="over"/>
+    </filter>
   </defs>
 
-  <!-- Main text: "IMMORTAL" -->
+  <!-- Main text: "IMMORTAL FORUM" -->
   <text 
     x="50%" 
     y="50%" 
     dominant-baseline="middle" 
     text-anchor="middle" 
-    font-family="'Comic Sans MS', Impact, sans-serif"
-    font-size="48" 
+    font-family="Woodblock, Impact, sans-serif"
+    font-size="56" 
     font-weight="bold"
     fill="url(#purpleGradient)"
-    filter="url(#glow)">
-    IMMORTAL
+    filter="url(#outline) url(#glow)">
+    IMMORTAL FORUM
   </text>
 </svg>

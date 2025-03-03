@@ -39,21 +39,23 @@
 
 	h1 {
 		width: 100%;
+		text-align: center;
 	}
 
 	.welcome {
 		display: block;
 		position: relative;
 		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+		height: 200px;
+		margin-bottom: 20px;
 	}
 
 	.welcome img {
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
+		width: 200%;
+		height: 200%;
+		left: 50%;
+		transform: translateX(-50%);
 		display: block;
 	}
 </style>
