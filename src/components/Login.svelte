@@ -1,21 +1,21 @@
 <script lang="ts">
-	import Modal from "./Modal.svelte";
+	// import Modal from "./basecomponents/Modal.svelte";
 
 	export let label = 'Login';
-	let modal: Modal | null = null;
+	// let modal: Modal | null = null;
 
 	const handleLogin = () => {
-		if (modal) modal.show();
+		// if (modal) modal.show();
 	};
 </script>
 
 <button class="login-button" on:click={handleLogin}>{label}</button>
 
-<Modal bind:this={modal}>
+<!-- <Modal bind:this={modal}>
     <h2>Modal title</h2>
     <p>Modal content.</p>
     <button on:click={() => modal?.hide()}>Close</button>
-</Modal>
+</Modal> -->
 
 
 <style>
