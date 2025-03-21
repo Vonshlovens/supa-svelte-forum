@@ -1,6 +1,24 @@
-<script>
+<script lang="ts">
+
 	import { page } from '$app/stores';
-	import Loginbutton from '../components/Login.svelte';
+	import { onMount } from 'svelte';
+	import Modal from '../components/basecomponents/Modal.svelte';
+	import Login from '../components/Login.svelte';
+	import type { State, LoggedInUserDetails } from '../lib/images/types/userdetails';
+	import { userDetails } from '../lib/images/types/store';
+
+	let showModal = false;
+
+	let user:State;
+	
+	userDetails.subscribe((value) => {
+		user = value
+	});
+
+	onMount(async () => {
+		// read token from sessionStorage
+        //await get_user();
+    });
 </script>
 
 <header>
@@ -12,11 +30,11 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
 		</ul>
-		<Loginbutton label="login" />
+		<button on:click={() => (showModal = true)}>Login</button>
+		<Modal bind:showModal>
+			<Login/>
+		</Modal>
 	</nav>
 </header>
 
