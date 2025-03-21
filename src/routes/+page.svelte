@@ -1,7 +1,5 @@
 <script>
-	import Counter from './Counter.svelte';
 	import immortal from '$lib/images/immortal.svg';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
@@ -20,12 +18,6 @@
 
 		Welcome to the Immortal Forum
 	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
 </section>
 
 <style>
